@@ -1,10 +1,15 @@
 {
-  "name": "shipping-service",
+  "name": "shipping-service-40",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest tests",
+    "start": "node src/app.js"
+  },
+  "engines": {
+      "node": "8.11.3",
+      "npm": "5.6.x"
   },
   "repository": {
     "type": "git",
@@ -13,8 +18,19 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "jest": {
+    "testEnvironment": "node"
+  },
   "bugs": {
     "url": "https://github.com/woody-cms/shipping-service/issues"
   },
-  "homepage": "https://github.com/woody-cms/shipping-service#readme"
+  "homepage": "https://github.com/woody-cms/shipping-service#readme",
+  "devDependencies": {
+    "nock": "^10.0.6",
+    "sinon": "^7.2.3"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4"
+  }
 }
